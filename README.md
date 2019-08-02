@@ -1,6 +1,6 @@
 # WebGL-GettingStarted-Project
 Project configured for webgl development (using typescript/javascript).
-The project is already set to webgl2.
+The project is set to webgl2.
 
 
 ## Requirements
