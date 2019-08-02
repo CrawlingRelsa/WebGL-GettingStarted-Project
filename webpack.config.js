@@ -11,12 +11,7 @@ module.exports = {
             { test: /\.ts$/, use: 'ts-loader' },
             {
                 test: /\.(vert|frag)$/,
-                loader: 'shader-loader',
-                options: {
-                    glsl: {
-                        chunkPath: path.resolve(__dirname, "dist", "shader")
-                    }
-                }
+                loader: 'shader-loader'
             }
         ],
     },
