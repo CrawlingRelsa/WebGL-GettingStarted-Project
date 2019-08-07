@@ -25,7 +25,7 @@ $ npm run build
 There are also some class that could help you.
 Keep in mind that these classes have some limitation and they're not optimized.
 
-
+```
 src
 ├── global.d.ts
 ├── index.html (entry file)
@@ -44,7 +44,7 @@ src
 └── textures
     ├── SoilCracked.png
     └── SoilCracked.png.b64 (base64 of the SoilCracked.png)
-
+```
 
 ## TODO list
 - improve uv mapping
