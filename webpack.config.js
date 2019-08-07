@@ -10,8 +10,8 @@ module.exports = {
         rules: [
             { test: /\.ts$/, use: 'ts-loader' },
             {
-                test: /\.(vert|frag)$/,
-                loader: 'shader-loader'
+                test: /\.(vert|frag|obj|b64)$/i,
+                use: 'raw-loader',
             }
         ],
     },

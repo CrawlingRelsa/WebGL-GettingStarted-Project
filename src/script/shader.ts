@@ -3,8 +3,12 @@ let gl = WebGL.getInstance();
 
 export class Shader {
     //variables
-    private program : WebGLProgram;
-    //constructor
+    public program : WebGLProgram;
+    /**
+     * constructor
+     * @param vsSource vertex shader text
+     * @param fsSource fragment shader text
+     */
     constructor(vsSource: string, fsSource: string){
         try {
             //vertex shader
@@ -28,15 +32,22 @@ export class Shader {
             console.log("error during the shader creation")
         }
     }
-
+    /**
+     * bind the shader
+     */
     public use(){
         gl.useProgram(this.program);
     }
-
+    /**
+     * delete the shader
+     */
     public delete(){
         gl.deleteProgram(this.program);
     }
-
+    /**
+     * compile shader created
+     * @param shader 
+     */
     private compileShader(shader: WebGLShader){
         gl.compileShader(shader);
         if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
