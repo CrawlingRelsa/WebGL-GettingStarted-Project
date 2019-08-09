@@ -5,7 +5,7 @@ type ImageLoadedFuntion = (textureID: WebGLTexture) => void;
 
 export class Utils {
     /**
-     * 
+     *
      * @param src uri of the image (url or base64)
      * @param callback function when image is loaded
      */
@@ -19,8 +19,12 @@ export class Utils {
             gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
             gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
             gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-            callback(textureID)
-        })
+            callback(textureID);
+        });
     }
-    
+
+    public static formatTime(date: number) {
+        let time = new Date(date);
+        return time.getMinutes() + ' min ' + time.getSeconds() + ' sec ' + time.getMilliseconds() + ' ms';
+    }
 }

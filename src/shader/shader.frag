@@ -9,6 +9,6 @@ in vec2 u_texCoord;
 uniform sampler2D diffuse;
 
 void main(){
+    //u_texCoord = u_texCoord * vec2(1., -1.); //can be useful to fix uv
     color = texture(diffuse, u_texCoord);
-    //color = vec4(u_Normal,1.0f);
 }

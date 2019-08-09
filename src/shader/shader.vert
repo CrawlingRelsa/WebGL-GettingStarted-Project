@@ -13,6 +13,7 @@ out vec3 u_Normal;
 out vec2 u_texCoord;
 
 void main(){
+    gl_PointSize = 10.0f;
     u_Normal = normal;
     u_texCoord = uv;
     gl_Position = projectionMatrix * viewMatrix * modelMatrix * vec4(position, 1.0f);
