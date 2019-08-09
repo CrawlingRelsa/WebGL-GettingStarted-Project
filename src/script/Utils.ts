@@ -5,11 +5,11 @@ type ImageLoadedFuntion = (textureID: WebGLTexture) => void;
 
 export class Utils {
     /**
-     *
      * @param src uri of the image (url or base64)
      * @param callback function when image is loaded
      */
     public static loadImage(src: string, callback: ImageLoadedFuntion) {
+        //I decide to take the src as url or base64, for front-end usage (example loading from input/loading from cdn)
         let textureID = gl.createTexture();
         var image = new Image();
         image.src = src;
